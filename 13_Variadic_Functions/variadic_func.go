@@ -22,4 +22,12 @@ func main(){
 	result := sum(4,5,6,7)
 
 	fmt.Println(result)
+
+	nums := []int{10,11,12,20}
+
+	result = sum(nums...)
+
+	fmt.Println(result)
+
+
 }
