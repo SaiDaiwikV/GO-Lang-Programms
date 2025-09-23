@@ -42,4 +42,8 @@ func main() {
 	for i, c := range "golang"{
 		fmt.Println(i, c)
 	}
+	fmt.Println("-------------------------------")
+	for i,c := range "goalng"{
+		fmt.Println(i, string(c))
+	}
 }
