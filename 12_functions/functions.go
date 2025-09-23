@@ -12,6 +12,12 @@ func getlanguages() (string, string, string){
 	return "golang", "python", "cpp"
 }
 
+func processIt() func(a int) int{
+	return  func(a int) int{
+		return a
+	}
+}
+
 func main(){
 	res := add(2, 3)
 
@@ -24,4 +30,12 @@ func main(){
 	// or you can simply call this function in fmt.Println directly
 	
 	fmt.Println(getlanguages())
+
+	lang1 , lang2 , _ = getlanguages() // _ means the compiler will ignore that parameter.
+
+	fmt.Println(lang1, lang2)
+
+	fn := processIt()
+	fmt.Println(fn(6))
+	fmt.Println(fn(100))
 }
