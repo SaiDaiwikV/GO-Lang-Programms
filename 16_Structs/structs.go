@@ -20,6 +20,10 @@ func (o *order) changeStatus(status string) { // the syntax is we need to use fi
 	o.status = status
 }
 
+func (o *order) getAmount() float32 {
+	return o.amount
+}
+
 func main() {
 	myorder1 := order{
 		id:     "1",
@@ -56,4 +60,9 @@ func main() {
 
 	fmt.Println("Updated myorder2 : ", myorder2)
 
+	// get the amount value from functions which is linked with struct:
+
+	fmt.Println("The amount of order-1 is : ", myorder1.getAmount())
+
+	fmt.Println("The amount of order-2 is :  ", myorder2.getAmount())
 }
