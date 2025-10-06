@@ -16,10 +16,30 @@ type order struct {
 // i need to create a link between function and struct
 // receiver type:
 
+<<<<<<< HEAD
+=======
+func newOrder(id string, amount float32, status string) *order {
+	Myorder := order{
+		id:     id,
+		amount: amount,
+		status: status,
+	}
+
+	return &Myorder
+}
+
+>>>>>>> 0358b91dd7fa1925d425a83aa61e85a38e994aa1
 func (o *order) changeStatus(status string) { // the syntax is we need to use first letter of struct for example i used 'o' because my struct name is 'order'
 	o.status = status
 }
 
+<<<<<<< HEAD
+=======
+func (o *order) getAmount() float32 {
+	return o.amount
+}
+
+>>>>>>> 0358b91dd7fa1925d425a83aa61e85a38e994aa1
 func main() {
 	myorder1 := order{
 		id:     "1",
@@ -56,4 +76,19 @@ func main() {
 
 	fmt.Println("Updated myorder2 : ", myorder2)
 
+<<<<<<< HEAD
+=======
+	// get the amount value from functions which is linked with struct:
+
+	fmt.Println("The amount of order-1 is : ", myorder1.getAmount())
+
+	fmt.Println("The amount of order-2 is :  ", myorder2.getAmount())
+
+	fmt.Println("-----------------------------")
+
+	// creating myorder3 using constructor of struct:
+	myorder3 := newOrder("3", 666.99, "Order Initiated")
+
+	fmt.Println("Order-3 is : ", myorder3)
+>>>>>>> 0358b91dd7fa1925d425a83aa61e85a38e994aa1
 }
