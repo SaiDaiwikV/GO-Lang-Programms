@@ -67,6 +67,10 @@ func main(){
 	defer dir.Close()
 
 	dirInfo,err := dir.ReadDir(0)
+	
+	if err != nil{
+		panic(err)
+	}
 
 	for _, d := range dirInfo{
 		fmt.Println(d.Name())
@@ -82,6 +86,9 @@ func main(){
 	defer dir1.Close()
 
 	dirInfo, err = dir1.ReadDir(0)
+	if err != nil{
+		panic(err)
+	}
 
 	for _,d := range dirInfo{
 		fmt.Println(d.Name()," - ",d.IsDir())
@@ -130,5 +137,6 @@ func main(){
 	fmt.Println("----End of file-handling.go--------below files1.go-code----")
 
 	files1()
+	files2()
 
 }
