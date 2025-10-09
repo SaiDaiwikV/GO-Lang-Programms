@@ -127,4 +127,8 @@ func main(){
 
 	fmt.Println(data)
 
+	fmt.Println("----End of file-handling.go--------below files1.go-code----")
+
+	files1()
+
 }
