@@ -138,5 +138,6 @@ func main(){
 
 	files1()
 	files2()
+	file3()
 
 }
